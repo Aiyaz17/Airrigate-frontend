@@ -1,0 +1,35 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+}
+.nav-container .logo {
+  font-weight: 800;
+  font-size: 1.8rem;
+  opacity: 0.85;
+  cursor: pointer;
+}
+.nav-container .nav-items {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  opacity: 0.9;
+  font-size: 1rem;
+}
+.nav-container .nav-items a:hover {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+.nav-container .contact-button {
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 2px solid black;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.nav-container .contact-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
