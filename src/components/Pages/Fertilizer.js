@@ -99,7 +99,7 @@ const FertilizerSuggestion = () => {
   };
 
   return (
-    <div className="page-container">
+    <div className="page-container section">
       <div className="title-container">
         <h1 className="title">Fertilizer Suggestion</h1>{" "}
       </div>

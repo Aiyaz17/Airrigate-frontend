@@ -180,7 +180,7 @@ const YieldPred = () => {
   };
 
   return (
-    <div className="page-container yeild-container">
+    <div className="page-container yeild-container section">
       <div className="title-container">
         <h1 className="title"> Yield Prediction</h1>{" "}
       </div>

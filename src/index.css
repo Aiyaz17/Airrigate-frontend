@@ -11,6 +11,7 @@
   --orange: #f57a32;
   --dark-blue: #13203c;
   --light-yellow: #cfbb49;
+  --primary: #fffbec;
 }
 body {
   background-color: #fffbec;
@@ -53,7 +54,8 @@ a:hover {
 .rcw-picker-btn {
   margin: auto 10px;
 }
-.rcw-conversation-container .rcw-header {
+.rcw-conversation-container .rcw-header,
+.rcw-close-button {
   background-color: #e38b0e !important;
   color: white;
 }
@@ -66,8 +68,13 @@ a:hover {
   padding-left: 10px;
 }
 
-@media screen and(max-width:1000px) {
+@media screen and (max-width: 900px) {
   .section {
     padding: 0 3rem !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .section {
+    padding: 0 1.5rem !important;
   }
 }

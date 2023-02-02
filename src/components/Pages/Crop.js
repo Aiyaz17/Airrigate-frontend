@@ -77,7 +77,7 @@ const CropPred = () => {
   // };
 
   return (
-    <div className="page-container">
+    <div className="page-container section">
       <div className="title-container">
         <h1 className="title"> Crop Recomendation</h1>{" "}
       </div>

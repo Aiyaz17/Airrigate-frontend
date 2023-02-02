@@ -37,8 +37,11 @@ const DiseaseDetect = () => {
   };
 
   return (
-    <div className="img-upload disease-container">
-      <div>
+    <div className="img-upload disease-container section">
+      <div className="title-container">
+        <h1 className="title">Disease Detection</h1>{" "}
+      </div>
+      <div className="input-container-disease ">
         <label for="images" class="drop-container">
           <span class="drop-title">Drop files here</span>
           or

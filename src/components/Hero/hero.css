@@ -24,6 +24,7 @@
 
 .hero-container .image-container {
   margin-top: 50px;
+  position: relative;
 }
 
 .hero-container .image-container img {
@@ -81,4 +82,25 @@
 .hero-button:hover {
   transform: scale(1.1);
   color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+  .options {
+    gap: 10px;
+  }
+  .img-content {
+    top: 50%;
+    left: 50%;
+  }
+  .options .option {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .img-content .options {
+    display: none;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
 }

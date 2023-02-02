@@ -10,20 +10,20 @@ const Hero = () => {
       </div>
       <div className="image-container">
         <img src={require("../../assets/images/hero.jpg")} alt="hero" />
-      </div>
-      <div className="img-content">
-        <div className="options">
-          <div className="option">🟠 Crop Selection Optimization Model</div>
-          <div className="option">🟢 Crop Fertilizer Advisory Tool </div>
-          <div className="option">🔵 Crop Yield Forecasting System</div>
-          <div className="option">
-            🟡 Computer Vision-based Plant Disease Diagnosis Framework{" "}
+        <div className="img-content">
+          <div className="options">
+            <div className="option">🟠 Crop Selection Optimization Model</div>
+            <div className="option">🟢 Crop Fertilizer Advisory Tool </div>
+            <div className="option">🔵 Crop Yield Forecasting System</div>
+            <div className="option">
+              🟡 Computer Vision-based Plant Disease Diagnosis Framework{" "}
+            </div>
+            <div className="option">🔴 Agri-Advisor (AI-Chatbot)</div>
           </div>
-          <div className="option">🔴 Agri-Advisor (AI-Chatbot)</div>
+          <Link to="#service" className="hero-button">
+            Explore
+          </Link>
         </div>
-        <Link to="#service" className="hero-button">
-          Explore
-        </Link>
       </div>
     </div>
   );

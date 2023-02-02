@@ -33,3 +33,49 @@
   cursor: pointer;
   transform: scale(1.1);
 }
+/* ---------------- responsive ------------ */
+
+.burger img {
+  max-width: 30px;
+  cursor: pointer;
+}
+
+.sidebar {
+  width: 50%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background-color: var(--primary);
+  z-index: 9;
+  padding: 30px;
+}
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.close-button {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+@media screen and (max-width: 900px) {
+  .nav-container {
+    height: 80px;
+  }
+  .nav-items {
+    flex-direction: column;
+    font-size: 1.2rem !important;
+  }
+  .nav-item-container {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .sidebar {
+    width: 70%;
+  }
+}

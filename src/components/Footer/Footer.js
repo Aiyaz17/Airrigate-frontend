@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="footer-container section" id="footer">
       <div className="left">
         <h1>AIRRIGATE</h1>
-        <p>airrigate@gmail.com</p>
+        <p>qureshi.aiyaz123@gmail.com</p>
       </div>
       <div className="right">
         <p>@2022 AIrrigate. All rights Reserved</p>
