@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./pagestyle.css";
+import baseUrl from "../../baseUrl";
 
 const crops = {
   Maize: 0,
@@ -78,7 +79,7 @@ const FertilizerSuggestion = () => {
       formdata.append("humidity", humidity);
       formdata.append("moisture", moisture);
       axios
-        .post(`http://localhost:5000/recomend-fertilizer`, formdata)
+        .post(`${baseUrl()}/recomend-fertilizer`, formdata)
         .then((response) => {
           console.log("Under Response");
           console.log("Fertilizer User ==> ", response);

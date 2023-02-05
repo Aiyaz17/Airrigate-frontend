@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./pagestyle.css";
+import baseUrl from "../../baseUrl";
 
 const CropPred = () => {
   const [values, setValues] = useState({
@@ -34,17 +35,15 @@ const CropPred = () => {
       formdata.append("humidity", humidity);
       formdata.append("ph", ph);
       formdata.append("rainfall", rainfall);
-      axios
-        .post(`http://localhost:5000/recomend-crop`, formdata)
-        .then((response) => {
-          console.log("Crop User ==> ", response.data);
-          setResult(response.data);
-          setTimeout(() => {
-            document
-              .querySelector("#result")
-              .scrollIntoView({ behavior: "smooth", block: "start" });
-          }, 500);
-        });
+      axios.post(`${baseUrl()}/recomend-crop`, formdata).then((response) => {
+        console.log("Crop User ==> ", response.data);
+        setResult(response.data);
+        setTimeout(() => {
+          document
+            .querySelector("#result")
+            .scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 500);
+      });
     } catch (err) {
       console.log("Crop Post Err ", err);
     }

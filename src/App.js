@@ -12,7 +12,7 @@ import { Widget, addResponseMessage } from "react-chat-widget";
 import chatIcon from "./assets/images/chat.png";
 import "react-chat-widget/lib/styles.css";
 import axios from "axios";
-
+import baseUrl from "./baseUrl";
 function App() {
   useEffect(() => {
     addResponseMessage("Welcome to this Go on and ask a question!");
@@ -23,7 +23,7 @@ function App() {
     const formdata = new FormData();
     formdata.append("prompt", newMessage);
     axios
-      .post("http://localhost:5000/chat", formdata)
+      .post(`${baseUrl()}/chat`, formdata)
       .then((response) => {
         // console.log(response.data.response);
         addResponseMessage(response.data.response);

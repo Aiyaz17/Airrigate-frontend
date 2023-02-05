@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./pagestyle.css";
+import baseUrl from "../../baseUrl";
 const DiseaseDetect = () => {
   const [image, setImage] = useState(null);
 
@@ -21,7 +22,7 @@ const DiseaseDetect = () => {
     formData.append("image", image);
     try {
       await axios
-        .post(`http://localhost:5000/detect-disease`, formData)
+        .post(`${baseUrl()}/detect-disease`, formData)
         .then((response) => {
           console.log("Image User ==> ", response);
           console.log(response);
