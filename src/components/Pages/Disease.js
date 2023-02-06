@@ -24,8 +24,8 @@ const DiseaseDetect = () => {
       await axios
         .post(`${baseUrl()}/detect-disease`, formData)
         .then((response) => {
-          console.log("Image User ==> ", response);
-          console.log(response);
+          // console.log("Image User ==> ", response);
+          // console.log(response);
           setName(response.data.split("---")[0]);
           setDisease(response.data.split("---")[1]);
           document
@@ -33,7 +33,7 @@ const DiseaseDetect = () => {
             .scrollIntoView({ behavior: "smooth", block: "start" });
         });
     } catch (err) {
-      console.log("Image Post Error ", err);
+      // console.log("Image Post Error ", err);
     }
   };
 

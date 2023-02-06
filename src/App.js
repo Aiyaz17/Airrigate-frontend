@@ -9,7 +9,7 @@ import Footer from "./components/Footer/Footer";
 // import Chat from "./components/Chat/Chat";
 import React, { useEffect } from "react";
 import { Widget, addResponseMessage } from "react-chat-widget";
-import chatIcon from "./assets/images/chat.png";
+// import chatIcon from "./assets/images/chat.png";
 import "react-chat-widget/lib/styles.css";
 import axios from "axios";
 import baseUrl from "./baseUrl";
@@ -18,7 +18,7 @@ function App() {
     addResponseMessage("Welcome to this Go on and ask a question!");
   }, []);
   const handleNewUserMessage = (newMessage) => {
-    console.log(`New message incoming! ${newMessage}`);
+    // console.log(`New message incoming! ${newMessage}`);
     // Now send the message throught the backend API
     const formdata = new FormData();
     formdata.append("prompt", newMessage);
@@ -32,9 +32,6 @@ function App() {
         console.log(e);
       });
   };
-  const ChatIcon = () => (
-    <img src={chatIcon} alt="chat" className="chat-icon" />
-  );
 
   return (
     <BrowserRouter>

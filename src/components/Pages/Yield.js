@@ -151,7 +151,7 @@ const YieldPred = () => {
     e.preventDefault();
     setResult(false);
     try {
-      console.log("Under Try");
+      // console.log("Under Try");
       const formdata = new FormData();
       formdata.append("area", area);
       formdata.append("item", item);
@@ -159,15 +159,17 @@ const YieldPred = () => {
       formdata.append("pesticides", pesticides);
       formdata.append("temperature", temperature);
       formdata.append("rainfall", rainfall);
-      axios.post(`${baseUrl()}/predict-yeild`, formdata).then((response) => {
-        console.log("Under Response");
-        console.log("Yield User ==> ", response);
-        setResult(response.data);
-        document
-          .querySelector("#result")
-          .scrollIntoView({ behavior: "smooth", block: "start" });
-        console.log("Success");
-      });
+      axios
+        .post(`${baseUrl()}/predict-yeild`, formdata)
+        .then((response) => {
+          // console.log("Under Response");
+          // console.log("Yield User ==> ", response);
+          setResult(response.data);
+          document
+            .querySelector("#result")
+            .scrollIntoView({ behavior: "smooth", block: "start" });
+          // console.log("Success");
+        });
     } catch (err) {
       console.log("Yield Post Err ", err);
     }

@@ -1,6 +1,7 @@
 module.exports = () => {
-  console.log(process.env.REACT_ENV);
-  if (process.env.ENV === "development") return "http://localhost:5000";
-  if (process.env.ENV === "production")
-    return "https://airrigate.onrender.com";
+  // console.log({ NODE_ENV: process.env.NODE_ENV });
+  if (process.env.NODE_ENV === "development")
+    return process.env.REACT_APP_BASE_URL_PROD;
+  if (process.env.NODE_ENV === "production")
+    return process.env.REACT_APP_BASE_URL_DEV;
 };

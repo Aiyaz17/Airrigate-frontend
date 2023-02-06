@@ -13,7 +13,6 @@ const CropPred = () => {
     ph: "",
     rainfall: "",
   });
-
   const [result, setResult] = useState(false);
   useEffect(() => {
     window.scrollTo({ top: 0 });
@@ -26,7 +25,7 @@ const CropPred = () => {
     setResult(false);
 
     try {
-      console.log("Under Try");
+      // console.log("Under Try");
       const formdata = new FormData();
       formdata.append("N", N);
       formdata.append("P", P);
@@ -35,17 +34,19 @@ const CropPred = () => {
       formdata.append("humidity", humidity);
       formdata.append("ph", ph);
       formdata.append("rainfall", rainfall);
-      axios.post(`${baseUrl()}/recomend-crop`, formdata).then((response) => {
-        console.log("Crop User ==> ", response.data);
-        setResult(response.data);
-        setTimeout(() => {
-          document
-            .querySelector("#result")
-            .scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 500);
-      });
+      axios
+        .post(`${baseUrl()}/recomend-crop`, formdata)
+        .then((response) => {
+          // console.log("Crop User ==> ", response.data);
+          setResult(response.data);
+          setTimeout(() => {
+            document
+              .querySelector("#result")
+              .scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 500);
+        });
     } catch (err) {
-      console.log("Crop Post Err ", err);
+      // console.log("Crop Post Err ", err);
     }
   };
 

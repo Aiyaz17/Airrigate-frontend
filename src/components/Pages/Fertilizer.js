@@ -68,7 +68,7 @@ const FertilizerSuggestion = () => {
     try {
       setResult(false);
 
-      console.log("Under Try");
+      // console.log("Under Try");
       const formdata = new FormData();
       formdata.append("N", N);
       formdata.append("P", P);
@@ -81,16 +81,16 @@ const FertilizerSuggestion = () => {
       axios
         .post(`${baseUrl()}/recomend-fertilizer`, formdata)
         .then((response) => {
-          console.log("Under Response");
-          console.log("Fertilizer User ==> ", response);
+          // console.log("Under Response");
+          // console.log("Fertilizer User ==> ", response);
           setResult(response.data);
           document
             .querySelector("#result")
             .scrollIntoView({ behavior: "smooth", block: "start" });
-          console.log("Success");
+          // console.log("Success");
         });
     } catch (err) {
-      console.log("Fertilizer post error ", err);
+      // console.log("Fertilizer post error ", err);
     }
   };
 
