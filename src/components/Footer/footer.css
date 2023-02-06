@@ -36,4 +36,12 @@
   .footer-container {
     flex-direction: column;
   }
+  .left {
+    text-align: center !important;
+    font-weight: bolder;
+  }
+  .right p {
+    margin-top: 5px;
+    font-size: 0.75rem;
+  }
 }
