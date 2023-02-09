@@ -183,5 +183,15 @@ input[type="file"]::file-selector-button:hover {
   }
   .form-container {
     padding: 50px 40px 50px;
+    width: auto;
+  }
+  .input-container {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  .input-container input,
+  .input-container select {
+    width: 100%;
   }
 }
